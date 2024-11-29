@@ -105,6 +105,10 @@ class MainActivity : AppCompatActivity() {
                             )
 
                         }
+                        if(biometricResult == BiometricResult.AuthenticationSuccess) {
+                            val intent = Intent(this@MainActivity,PasswordGenerator::class.java)
+                            startActivity(intent)
+                        }
                     }
                 }
             }
